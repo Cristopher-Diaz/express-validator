@@ -36,6 +36,20 @@
 
         <button type="submit" class="btn btn-primary">Registrar</button>
       </form>
+
+      <% if(typeof validations != 'undefined') { %>
+
+        <% validations.forEach(validation => { %>
+           
+
+          <div class="alert alert-danger alert-dismissible fade show mt-4" role="alert">
+            <strong>Woops!</strong> <%= validation.msg %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <% }) %>
+      <% } %>
+
+
     </div>
 
 
